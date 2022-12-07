@@ -1,0 +1,28 @@
+- Fix extra white space / organization of icons on main page
+- Make a page that has some 'have you tried' style tips along with an FAQ / guidelines for solving
+
+Landing Page:
+	- Fix extra white space / organization of icons
+	- Needs flavortext / brief over-arching story
+
+Same old story:
+	- Bender's game is the 3rd movie in the series, not the 4th. Fix enumeration but leave grid the same, it'll just have the wrong number of turns
+	- Add clues that got chopped off to cluelist
+
+All the Digits:
+	- Need to add second puzzle
+	- Need to replace current puzzle with correct version 
+
+Horsin' Around:
+	Needs flavortext
+	Needs clue words underneath the rebus clues
+
+Pages to add:
+	- Make a page that has some 'have you tried' style tips along with an FAQ / guidelines for solving
+	- On same page can also have writing credits
+
+Finished Pages:
+	Headless
+	Mason
+	Freaky Forms
+
