@@ -13,7 +13,7 @@ function check(submit, puzzle) {
         return;
     }
     if (answers[puzzle] == hash(cleaned)) {
-        if (puzzle == "mjm") { // meta victory screen
+        if (puzzle == "meta") { // meta victory screen
             window.location.href = "victory.html";
         }
         document.getElementById("solved").hidden = false;
