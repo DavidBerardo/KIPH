@@ -10,8 +10,7 @@ Same old story:
 	- Add clues that got chopped off to cluelist
 
 All the Digits:
-	- Need to add second puzzle
-	- Need to replace current puzzle with correct version 
+	- Double check that puzzle info is correct 
 
 Horsin' Around:
 	Needs flavortext
