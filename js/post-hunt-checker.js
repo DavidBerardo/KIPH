@@ -14,7 +14,7 @@ function check(submit, puzzle) {
     }
     if (answers[puzzle] == hash(cleaned)) {
         if (puzzle == "meta") { // meta victory screen
-            window.location.href = "victory.html";
+            window.location.href = "../victory.html";
         }
         document.getElementById("solved").hidden = false;
         document.getElementById("unsolved").hidden = true;

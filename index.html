@@ -8,13 +8,21 @@
   <link rel="icon" href="images/puzzle.ico" type="image/vnd.microsoft.icon">
   
 
-  <title>Horsin' Around &mdash; KIPH 2022</title>
+  <title>KIPH 2022</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   
   <link rel="stylesheet" type="text/css" href="css/nav.css">
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script defer src="js/post-hunt-checker.js"></script>
+
+  <style>
+
+    .fenced tr td {
+      border: 0px;
+    }
+
+  </style>
 
 </head>
 
@@ -31,67 +39,65 @@
 
   
 <div class="content">
-  <h1 class="puzzle-title-header">Horsin' Around</h1>
+  <h1 class="puzzle-title-header">KIPH 2022</h1>
   <main>
-    <div class="puzzle-header">
-      <div style="width: 100%">
-                   
-            <div class="solved-panel" id="solved" hidden>
-        <h4>Solved!</h4>
-        <p>The answer was <b id="solve-answer"></b>.</p>
-    </div>
-    <div class="unsolved-panel" id="unsolved" hidden>
-        <h4>Incorrect!</h4>
-    </div>
-
-        
-        <div class="row" id="guess">
-            <div class="column">
-                <label for="id_answer">Enter your guess:</label>
-            </div>
-            <div class="column">
-                <input type="text" name="answer" maxlength="500" required id="id_answer">
-                
-            </div>
-            <div class="column">
-                <button class="btn" type="submit" onclick="check(document.getElementById('id_answer').value, 'meta')" id="submit-btn">Submit</button>
-            </div>
-        </div>
-
-        
-      </div>
-    </div>
     <div class="puzzle">
       <!-- Puzzle content begins here -->
+
+      <i>Flavor text here...</i>
+
+      <br />
+      <br />
       
       <div style="text-align: center;">
-        <a href="puzzle/all_the_digits.html">
-          <img src="images/all_the_digits.png" style="width: 200px; height: 200px;">
+        <a href="puzzle/meta_horsing_around.html">
+          <img src="images/horsing_around.png" style="width: 200px; height: 200px;"><br />
+          <b>Horsin' Around</b>
         </a>
+      </div>
 
-        <br />
+      <br /><br />
+      
+      <div style="text-align: center;">
+        <table class="fenced">
+          <tr>
+            <td>
+              <a href="puzzle/all_the_digits.html">
+                <img src="images/all_the_digits.png" style="width: 200px; height: 200px;"><br />
+                <b>The Numbers Must Remain Single</b>
+              </a>
+            </td>
+            <td>
+              <a href="puzzle/freaky_forms.html">
+                <img src="images/freaky_forms.png" style="width: 200px; height: 200px;"><br />
+                <b>Freaky Forms</b>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="puzzle/free_mason.html">
+                <img src="images/free_mason.png" style="width: 200px; height: 200px;"><br />
+                <b>FREE MASON!!</b>
+              </a>
+            </td>
+            <td>
+              <a href="puzzle/headless.html">
+                <img src="images/headless.png" style="width: 200px; height: 380px;"><br />
+                <b>Headless</b>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <a href="puzzle/same_old_story.html">
+                <img src="images/same_old_story.png" style="width: 200px; height: 240px;"><br />
+                <b>Same Old Story</b>
+              </a>
+            </td>
+          </tr>
+        </table>
 
-        <a href="puzzle/freaky_forms.html">
-          <img src="images/freaky_forms.png" style="width: 200px; height: 200px;">
-        </a>
-
-        <br />
-
-        <a href="puzzle/free_mason.html">
-          <img src="images/free_mason.png" style="width: 200px; height: 200px;">
-        </a>
-
-        <br />
-
-        <a href="puzzle/headless.html">
-          <img src="images/headless.png" style="width: 200px; height: 380px;">
-        </a>
-
-        <br />
-
-        <a href="puzzle/same_old_story.html">
-          <img src="images/same_old_story.png" style="width: 200px; height: 240px;">
-        </a>
       </div>
 
       <!-- Puzzle content ends here -->
