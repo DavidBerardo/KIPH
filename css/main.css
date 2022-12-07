@@ -35,7 +35,7 @@ a:hover {
 }
 
 .info, .puzzle, .puzzle-header, .solution-header {
-  background-color: #fffffff0;
+  background-color: white;
   padding: 20px 30px;
   width: 1000px;
   margin: 10px auto;
@@ -287,6 +287,17 @@ h1 img {
   float: left;
   padding-right: 20px;
   height: 40px;
+}
+
+.clues {
+  line-height: 1.5;
+}
+
+.clues tr td {
+  text-align: left;
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .unsolved-panel {
