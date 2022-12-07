@@ -1,9 +1,9 @@
 let answers = {
     'headless':'db6514e6227b8e7530db5e783df9d6f6f3e8c68c',
-    'freaky':'daab5f5d7a2ff6766aa454de20ffca39fddfec6e',
-    'mason':'eb5390aa0057b87994b1312816d010385b03a63d',
-    'digits':'8ab16b2c76dd64f969c5fe229d46849a4f2137e9',
-    'sameold':'21f7f1aaf8ab72d6bacf5ecaa5bbba39ce9fcec2',
+    'freaky-forms':'daab5f5d7a2ff6766aa454de20ffca39fddfec6e',
+    'free-mason':'eb5390aa0057b87994b1312816d010385b03a63d',
+    'all-the-digits':'8ab16b2c76dd64f969c5fe229d46849a4f2137e9',
+    'same-old-story':'21f7f1aaf8ab72d6bacf5ecaa5bbba39ce9fcec2',
     'meta':'da17b51abeac2ee623f1202ea76a9d4d3356f47b'
 }
 
