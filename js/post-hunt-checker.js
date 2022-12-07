@@ -1,5 +1,10 @@
 let answers = {
-    'headless':'db6514e6227b8e7530db5e783df9d6f6f3e8c68c'
+    'headless':'db6514e6227b8e7530db5e783df9d6f6f3e8c68c',
+    'freaky':'',
+    'mason':'',
+    'digits':'',
+    'sameold':'',
+    'meta':''
 }
 
 function check(submit, puzzle) {
