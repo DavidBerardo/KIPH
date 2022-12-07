@@ -311,3 +311,12 @@ h1 img {
   text-align: center;
   border: 0px;
 }
+
+#guess {
+  width: 100%;
+  height: auto;
+  margin: 0 300px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}

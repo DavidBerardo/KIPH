@@ -7,6 +7,8 @@ let answers = {
     'same-old-story':'21f7f1aaf8ab72d6bacf5ecaa5bbba39ce9fcec2',
 }
 
+const jsConfetti = new JSConfetti();
+
 function check(submit, puzzle) {
     let cleaned = submit.toUpperCase().replaceAll(/[^A-Z]+/g, "");
     if (cleaned == "") {
@@ -16,11 +18,15 @@ function check(submit, puzzle) {
         if (puzzle == "meta") { // meta victory screen
             window.location.href = "../victory.html";
         }
-        document.getElementById("solved").hidden = false;
-        document.getElementById("unsolved").hidden = true;
-        document.getElementById("id_answer").value = "";
-        document.getElementById("solve-answer").innerHTML = cleaned;
-        document.getElementById("guess").hidden = true;
+        else {
+            document.getElementById("solved").hidden = false;
+            document.getElementById("unsolved").hidden = true;
+            document.getElementById("id_answer").value = "";
+            document.getElementById("solve-answer").innerHTML = cleaned;
+            document.getElementById("guess").hidden = true;
+    
+            jsConfetti.addConfetti();
+        }
     } else {
         document.getElementById("solved").hidden = true;
         document.getElementById("unsolved").hidden = false;
