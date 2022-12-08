@@ -21,88 +21,89 @@
 
 <body>
   
-<nav class="navbar" >
-  <ul class="navbar-list">
-        
-        <li class="navbar-list-item">
-          
-          <a href="../index.html">Back to puzzles</a>
-          
-        </li>
-  
-  </ul>
-</nav>
-<div id="notifications"></div>
-
-  
-<div class="content">
-  <h1 class="puzzle-title-header">Headless</h1>
-  <main>
-    <div class="puzzle-header">
-      <div style="width: 100%">
-                   
-            <div class="solved-panel" id="solved" hidden>
-        <h4>Solved!</h4>
-        <p>The answer was <b id="solve-answer" style="color:green;"></b>.</p>
-    </div>
-    <div class="unsolved-panel" id="unsolved" hidden>
-        <h4>Incorrect!</h4>
-    </div>
-
-        
-        <div class="row" id="guess">
-            <div class="column">
-                <label for="id_answer">Enter your guess:</label>
-            </div>
-            <div class="column">
-                <input type="text" name="answer" maxlength="500" required id="id_answer">
-                
-            </div>
-            <div class="column">
-                <button class="btn" type="submit" onclick="check(document.getElementById('id_answer').value, 'headless')" id="submit-btn">Submit</button>
-            </div>
-        </div>
-
-        
-      </div>
-    </div>
-    <div class="puzzle">
-      <!-- Puzzle content begins here -->
+  <nav class="navbar" >
+    <ul class="navbar-list">
       
+      <li class="navbar-list-item">
+        <a href="../index.html">Back to puzzles</a>
+      </li>
+      <li class="navbar-list-item">    
+        <a href="../faq.html">FAQ</a>
+      </li>
+      
+    </ul>
+  </nav>
+  <div id="notifications"></div>
+
+  
+  <div class="content">
+    <h1 class="puzzle-title-header">Headless</h1>
+    <main>
+      <div class="puzzle-header">
+        <div style="width: 100%">
+         
+          <div class="solved-panel" id="solved" hidden>
+            <h4>Solved!</h4>
+            <p>The answer was <b id="solve-answer" style="color:green;"></b>.</p>
+          </div>
+          <div class="unsolved-panel" id="unsolved" hidden>
+            <h4>Incorrect!</h4>
+          </div>
+
+          
+          <div class="row" id="guess">
+            <div class="column">
+              <label for="id_answer">Enter your guess:</label>
+            </div>
+            <div class="column">
+              <input type="text" name="answer" maxlength="500" required id="id_answer">
+              
+            </div>
+            <div class="column">
+              <button class="btn" type="submit" onclick="check(document.getElementById('id_answer').value, 'headless')" id="submit-btn">Submit</button>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+      <div class="puzzle">
+        <!-- Puzzle content begins here -->
+        
         <i>The undertaker always makes a clean & lean cut, which helps when sorting out the remains. What’s that hidden inside their heads?</i>
 
         <br />
         <br />
 
         <table style="font-size: 24pt;">
-            <tr>
-                <td>
-                    <img alt="" src="../images/guillotine.png" title="" style="width: 271.50px; height: 354.00px;">
-                </td>
-                <td style="text-align: right; padding-right: 35px;">
-                    Ajar<br />
-                    Lions call<br />
-                    Month<br />
-                    Risotto Base<br />
-                    Scribed<br />
-                    Small Angle
-                </td>
-                <td>________<br />
-                    ________<br />
-                    ________<br />
-                    ________<br />
-                    ________<br />
-                    ________
-                </td>
-                <td>
-                    <img alt="" src="../images/guillotine.png" title="" style="width: 271.50px; height: 354.00px;"">
-                </td>
-            </tr>
-        </table>
+          <tr>
+            <td>
+              <img alt="" src="../images/guillotine.png" title="" style="width: 271.50px; height: 354.00px;">
+            </td>
+            <td style="text-align: right; padding-right: 35px;">
+              Ajar<br />
+              Lions call<br />
+              Month<br />
+              Risotto Base<br />
+              Scribed<br />
+              Small Angle
+            </td>
+            <td>________<br />
+              ________<br />
+              ________<br />
+              ________<br />
+              ________<br />
+              ________
+            </td>
+            <td>
+              <img alt="" src="../images/guillotine.png" title="" style="width: 271.50px; height: 354.00px;"">
+              </td>
+              </tr>
+              </table>
 
-      <!-- Puzzle content ends here -->
-    </div>
-  </main>
-</div>
-</body>
-</html>
+              <!-- Puzzle content ends here -->
+              </div>
+              </main>
+              </div>
+              </body>
+              </html>
