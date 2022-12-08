@@ -17,6 +17,19 @@
   <script defer src="js/post-hunt-checker.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 
+  <style>
+    .rotate{
+       animation: rotation 30s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-359deg);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -50,6 +63,9 @@
       <!-- Puzzle content begins here -->
       
       You win!
+      <div>
+        <img class="rotate" src="images/prize.png" style="width: 600px; height: 600px"><br />
+      </div>
 
       <!-- Puzzle content ends here -->
     </div>
