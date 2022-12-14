@@ -9,6 +9,7 @@ let answers = {
 
 const jsConfetti = new JSConfetti();
 
+
 function check(submit, puzzle) {
     let cleaned = submit.toUpperCase().replaceAll(/[^A-Z]+/g, "");
     if (cleaned == "") {
@@ -25,7 +26,25 @@ function check(submit, puzzle) {
             document.getElementById("solve-answer").innerHTML = cleaned;
             document.getElementById("guess").hidden = true;
     
-            jsConfetti.addConfetti();
+            //for(let y = 0; y < 10; y++){
+            //    for(let x = 0; x <50; x++){
+            //        jsConfetti.addConfetti();
+            //    }
+            // }
+            const work = (i)=>{
+             for(let x = 0; x<10; x++){
+                jsConfetti.addConfetti();
+             }
+            }
+
+            let counter = 0
+            const timer = setInterval(()=>{
+              if (timer && ++counter >= 10) {
+               clearInterval(timer)
+              }
+              work(counter);
+            }, 750)
+
         }
     } else {
         document.getElementById("solved").hidden = true;
