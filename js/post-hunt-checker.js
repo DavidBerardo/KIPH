@@ -39,7 +39,7 @@ function check(submit, puzzle) {
 
             let counter = 0
             const timer = setInterval(()=>{
-              if (timer && ++counter >= 10) {
+              if (timer && ++counter >= 5) {
                clearInterval(timer)
               }
               work(counter);
