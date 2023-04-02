@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=1200, user-scalable=yes"></meta>
+  
+  
+  <link rel="icon" href="../images/puzzle.ico" type="image/vnd.microsoft.icon">
+  
+
+  <title>Freaky Forms &mdash; KIPH 2022</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  
+  <link rel="stylesheet" type="text/css" href="../css/nav.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script defer src="../js/post-hunt-checker.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+  <style>
+    .forms-grid tr td {
+      border: 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar" >
+    <ul class="navbar-list">
+
+     <li class="navbar-list-item">
+
+      <a href="../index.html">Back to Main</a>
+      <a href="../puzzle/freaky_forms.html">Back to Puzzle</a>
+      <a href="../faq.html">FAQ</a>
+    </li>
+
+  </ul>
+</nav>
+<div id="notifications"></div>
+
+
+<div class="content">
+  <h1 class="puzzle-title-header">Freaky Forms</h1>
+  <main>
+    <div class="puzzle-header">
+      <div style="width: 100%">
+
+        <div class="puzzle-actions">
+          <p><center>
+            Answer: <span class="answer spoiler">FLYGON</span>
+
+            <br />
+            by Kaley Brauer
+          </center></p>
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="puzzle">
+      <!-- Puzzle content begins here -->
+      
+      <p>Each pair of creatures represents a Pokemon from the first game, in an art style which suggests a certain type. Within pokemon, there is a canonical match up being types, where one type has an advantage over another, i.e. fire beats ice.</p>
+
+      <p>The matchups are given below, with the advantage type bolded:</p>
+
+
+      <table class="forms-grid">
+        <tr>
+          <td>
+            <center><b>Fire</b> vs Grass</center>
+          </td>
+
+          <td>
+            <center><b>Fighting</b>  vs Ice</center>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="" src="../images/forms1.png" title="" style="width: 435.00px; height: 195.81px;">
+          </td>
+
+          <td>
+            <img alt="" src="../images/forms2.png" title="" style="width: 435.00px; height: 195.81px;">
+          </td>
+        </tr>
+        <tr>
+          <tr>
+            <td>
+              <center><b>Electric</b> vs Flying</center>
+            </td>
+
+            <td>
+              <center>Grass vs <b>Poison</b></center>
+            </td>
+          </tr>
+          <td>
+            <img alt="" src="../images/forms3.png" title="" style="width: 435.00px; height: 195.81px;">
+          </td>
+          <td>
+            <img alt="" src="../images/forms4.png" title="" style="width: 435.00px; height: 195.81px;">
+          </td>
+        </tr>
+        <tr>
+          <tr>
+            <td>
+              <center>Fighting vs <b>Flying</b></center>
+            </td>
+
+            <td>
+              <center><b>Dragon</b>  vs <b>Dragon</b></center>
+            </td>
+          </tr>
+          <td>
+            <img alt="" src="../images/forms5.png" title="" style="width: 435.00px; height: 195.81px;">
+          </td>
+          <td>
+            <img alt="" src="../images/forms6.png" title="" style="width: 435.00px; height: 195.81px;">
+          </td>
+        </tr>
+      </table>
+
+      <p>In the case of dragon, it ends up being strong against itself. This clues us to the fact that what matters is the winning type, and not say left/right winner. Another useful piece of information is the pokedex number of each pokemon.</p>
+
+      <p>This number can be used to index into the winning type, and extract the answer reading down the columns:</p>
+
+
+      <table style="text-align: center">
+      <tr><td>Pokemon</td><td>Pokedex #</td><td>Winning Type</td><td>Extracted Letter</td></tr>
+      <tr><td>Bulbasaur</td><td>1</td><td>FIRE</td><td>F</td></tr>
+      <tr><td>Ivysaur</td><td>2</td><td>ELECTRIC</td><td>L</td></tr>
+      <tr><td>Venasaur</td><td>3</td><td>FLYING</td><td>Y</td></tr>
+      <tr><td>Wartortle</td><td>8</td><td>FIGHTING</td><td>G</td></tr>
+      <tr><td>Charmeleon</td><td>5</td><td>POISON</td><td>O</td></tr>
+      <tr><td>Charizard</td><td>6</td><td>DRAGON</td><td>N</td></tr>
+      </table>
+
+      <p>This gives us our final answer: FLYGON (which is itself a pokemon from a later generation)</p>
+
+      <!-- Puzzle content ends here -->
+    </div>
+  </main>
+</div>
+</body>
+</html>
