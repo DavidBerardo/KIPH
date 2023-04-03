@@ -25,360 +25,437 @@
 
     .cw tr td {
       border: 1px solid black;
-      width: 35px;
-      height: 35px;
+      width: 44px;
+      height: 44px;
+      padding: 0px;
     }
 
     .cw tr td.clue {
       background-color: #CCCCCC;
       font-size: 10pt;
       font-weight: bold;
-      padding: 2px;
+      padding: 0px;
       vertical-align: top;
+      text-align:left;
+    }
+
+    .cw tr td.sol_clue {
+      background-color: #CCCCCC;
+      padding: 0px;
     }
 
     .cw tr td.highlight {
       background-color: #f2bf46;
     }
 
+    div.sol{
+      position: relative; 
+      height: 100%;
+      text-align: bottom; 
+      font-size: 25px; 
+      font-weight: normal; 
+      display: flex; 
+      justify-content: 
+      center; 
+      padding:0px;
+    }
+
+    span.clue{
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      font-size: 15px; 
+      font-weight: bold;
+      padding:0px;
+    }
+
+    span.sol{
+      position: absolute; 
+      display: flex;
+      top:20%;
+      justify-content: center;
+      font-size: 25px; 
+      font-weight: normal;
+      padding:0px;
+    }
   </style>
 
 </head>
 
 <body>
-  
-<nav class="navbar" >
-  <ul class="navbar-list">
-        
-         <li class="navbar-list-item">
-          
-          <a href="../index.html">Back to Main</a>
-          <a href="../puzzle/all_the_digits.html">Back to Puzzle</a>
-          <a href="../faq.html">FAQ</a>
-        </li>
-  
+
+  <nav class="navbar" >
+    <ul class="navbar-list">
+
+     <li class="navbar-list-item">
+
+      <a href="../index.html">Back to Main</a>
+      <a href="../puzzle/all_the_digits.html">Back to Puzzle</a>
+      <a href="../faq.html">FAQ</a>
+    </li>
+
   </ul>
 </nav>
 <div id="notifications"></div>
 
-  
+
 <div class="content">
   <h1 class="puzzle-title-header">The Numbers Must Remain Single</h1>
   <main>
     <div class="puzzle-header">
-      <div style="width: 100%">
-                   
-            <div class="solved-panel" id="solved" hidden>
-        <h4>Solved!</h4>
-        <p>The answer was <b id="solve-answer" style="color:green;"></b>.</p>
-    </div>
-    <div class="unsolved-panel" id="unsolved" hidden>
-        <h4>Incorrect!</h4>
-    </div>
-
-        
-        <div class="row" id="guess">
-            <div class="column">
-                <label for="id_answer">Enter your guess:</label>
-            </div>
-            <div class="column">
-                <input type="text" name="answer" maxlength="500" required id="id_answer">
-                
-            </div>
-            <div class="column">
-                <button class="btn" type="submit" onclick="check(document.getElementById('id_answer').value, 'all-the-digits')" id="submit-btn">Submit</button>
-            </div>
-        </div>
-
-        
-      </div>
-    </div>
-    <div class="puzzle">
-    <!-- Puzzle content begins here -->
+        <div style="width: 100%">
+         
+        <div class="puzzle-actions">
+        <p><center>
+        Answer: <span class="answer spoiler">ASIA</span>
       
-      <i>Numbers, letters, words, whatever it's all the same!</i>
+        <br />
+        by David Berardo
+        </center></p>
+        </div>
+          
+        </div>
+      </div>
+    <div class="puzzle">
+      <!-- Solution content begins here -->
 
-      <p>(Words should be entered into the grid crossword style, either going to the right or down, direction to be determined by the solver)</p>
+      <p>As per the instructions, we should start filling in crossword answers. Some clues, such as the 1st one at 9 letters, can only be entered into the grid in one orientation. Filling in as many clues as we can with these constraints allows us to reach the following point:</p>
 
       <br />
       <br />
 
-      <div style="display: inline-block;">
-        <table class="cw">
-          <tr>
-              <td></td>
-              <td class="clue">1</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="highlight"></td>
-              <td class="clue">2</td>
-              <td></td>
-              <td class="clue">3</td>
-          </tr>
-          <tr>
-              <td class="clue">4</td>
-              <td></td>
-              <td class="clue">5</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">6</td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td class="highlight"></td>
-              <td></td>
-              <td></td>
-              <td class="clue">7</td>
-              <td></td>
-              <td class="clue">8</td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td class="clue">9</td>
-              <td></td>
-              <td class="clue">10</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">11</td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td class="clue">12</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">13</td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="highlight"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td class="clue">14</td>
-              <td></td>
-              <td class="clue">15</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="highlight"></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td class="clue">16</td>
-              <td></td>
-              <td></td>
-              <td class="clue">17</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-      </table>
-    </div>
-    
-    <div style="display: inline-block; vertical-align: top;">
-      <table class="clues">
-        <tr>
-          <td>
-            1. Grim kind of society (9)<br />
-            2. Sun kiss (3) <br />
-            3. 'Net connecter (3)<br />
-            4. Growing ______ (5)<br />
-            5. Likes, with 'is' (4)<br />
-            6. Show interrupters (3)<br />
-            7. Small bark (3)<br />
-            8. Film score (3)<br />
-            9. Sunny actor Charlie (3)<br />
-            10. Quick sleeps (4) <br />
-            11. Feel bad for (4) <br />
-            12. Peep on (3) <br />
-            13. Organic code (3)<br />
-            14. Restaurant water option (3) <br/> 
-            15. Gangnam style singer (3)<br />
-          </td>
-          <td>
-           16. Inverting logic gate (3)<br />
-           17. Tilted Tower Town (4)
-          </td>
-        </tr>
-      </table>
-    </div>
+        <table class="cw" style="text-align:center">
+<tr>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">D</span><span class="clue">1</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td class="highlight" ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">T</span><span class="clue">2</span></div></td>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">I</span><span class="clue">3</span></div></td>
+</tr>
+<tr>
+<td class="sol_clue" ><div class="sol"><span class="sol">P</span><span class="clue">4</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">Y</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">I</span><span class="clue">5</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">A</span><span class="clue">6</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td class="highlight" ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">Y</span><span class="clue">7</span></div></td>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">O</span><span class="clue">8</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">P</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">I</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">D</span><span class="clue">9</span></div></td>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">N</span><span class="clue">10</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td ><div class="sol"></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">P</span><span class="clue">11</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td ><div class="sol"></div></td>
+</tr>
+<tr>
+<td class="sol_clue" ><div class="sol"><span class="sol">S</span><span class="clue">12</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">P</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">Y</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">D</span><span class="clue">13</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+</tr>
+<tr>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">I</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td class="highlight" ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+</tr>
+<tr>
+<td class="sol_clue" ><div class="sol"><span class="sol">T</span><span class="clue">14</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">P</span><span class="clue">15</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">Y</span></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td ><div class="sol"></div></td>
+<td class="highlight" ><div class="sol"></div></td>
+</tr>
+<tr>
+<td ><div class="sol"></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">N</span><span class="clue">16</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">P</span><span class="clue">17</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">I</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"></div></td>
+</tr>
+        </table>
+     
+<p>
+    Some clues, like 13 which is likely to be 'DNA', could at this point still be entered into the grid in either orientation. The clue for how to proceed comes to the title of the puzzle, which is the japanese translation of the 'sudoku'.</p>
 
+<p>Solvers may notice that all the answers use the same set of 9 letters (coming from the long clue DYSTOPIAN), which suggests solving the grid as a sudoku puzzle. This allows us to uniquely constrain the remaining clues, as well as to fill in the emtpy squares:
+</p>
 
+<table class="cw" style="text-align:center">
+<tr>
+<td ><div class="sol"><span class="sol">O</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">D</span><span class="clue">1</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">N</span></div></td>
+<td ><div class="sol"><span class="sol">P</span></div></td>
+<td ><div class="sol"><span class="sol">A</span></div></td>
+<td class="highlight" style="border-right:5px solid black;"><div class="sol"><span class="sol">S</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">T</span><span class="clue">2</span></div></td>
+<td ><div class="sol"><span class="sol">Y</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">I</span><span class="clue">3</span></div></td>
+</tr>
+<tr>
+<td class="sol_clue" ><div class="sol"><span class="sol">P</span><span class="clue">4</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">Y</span></div></td>
+<td class="sol_clue" style="border-right:5px solid black;"><div class="sol"><span class="sol">I</span><span class="clue">5</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">A</span><span class="clue">6</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">D</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+</tr>
+<tr>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td class="highlight" style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"><span class="sol">T</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"><span class="sol">I</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"><span class="sol">D</span></div></td>
+<td class="sol_clue" style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"><span class="sol">Y</span><span class="clue">7</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"><span class="sol">N</span></div></td>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">O</span><span class="clue">8</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">P</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">I</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td class="sol_clue" style="border-right:5px solid black;"><div class="sol"><span class="sol">D</span><span class="clue">9</span></div></td>
+<td ><div class="sol"><span class="sol">Y</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">N</span><span class="clue">10</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">P</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td ><div class="sol"><span class="sol">O</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"><span class="sol">D</span></div></td>
+<td ><div class="sol"><span class="sol">S</span></div></td>
+<td class="sol_clue" style="border-right:5px solid black;"><div class="sol"><span class="sol">P</span><span class="clue">11</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">I</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">Y</span></div></td>
+</tr>
+<tr>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">S</span><span class="clue">12</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">P</span></div></td>
+<td style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">Y</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"><span class="sol">O</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"><span class="sol">I</span></div></td>
+<td style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"><span class="sol">T</span></div></td>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">D</span><span class="clue">13</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"><span class="sol">D</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">I</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td class="highlight" ><div class="sol"><span class="sol">A</span></div></td>
+<td ><div class="sol"><span class="sol">O</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">N</span></div></td>
+<td ><div class="sol"><span class="sol">Y</span></div></td>
+<td ><div class="sol"><span class="sol">P</span></div></td>
+<td ><div class="sol"><span class="sol">T</span></div></td>
+</tr>
+<tr>
+<td class="sol_clue" ><div class="sol"><span class="sol">T</span><span class="clue">14</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td class="sol_clue" style="border-right:5px solid black;"><div class="sol"><span class="sol">P</span><span class="clue">15</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">Y</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">D</span></div></td>
+<td ><div class="sol"><span class="sol">O</span></div></td>
+<td ><div class="sol"><span class="sol">I</span></div></td>
+<td class="highlight" ><div class="sol"><span class="sol">N</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"><span class="sol">Y</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">N</span><span class="clue">16</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">P</span><span class="clue">17</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">I</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">S</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"><span class="sol">D</span></div></td>
+</tr>
 
-    <br />
-    <br /> 
-    <br />
-    <br />
+</table>
 
-      <div style="display: inline-block;">
-        <table class="cw">
-          <tr>
-              <td class="clue">1</td>
-              <td></td>
-              <td class="clue">2</td>
-              <td></td>
-              <td></td>
-              <td class="clue">3</td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="highlight"></td>
-              <td class="clue">4</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">5</td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">6</td>
-              <td></td>
-              <td></td>
-              <td class="clue">7</td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td class="clue">8</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">9</td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">10</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">11</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">12</td>
-              <td class="clue">13</td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="clue">14</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td class="highlight"></td>
-              <td></td>
-              <td class="highlight"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td class="clue">15</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="highlight"></td>
-              <td></td>
-          </tr>
-      </table>
-    </div>
-    
-    <div style="display: inline-block; vertical-align: top;">
-      <table class="clues">
-        <tr>
-          <td>
-            1. Ten-legged Race (9)<br />
-            2. Golf Goal (4)<br />
-            3. Shade of blue (4)<br />
-            4. Private eye, briefly (3)<br />
-            5. Liver oil fish (3)<br />
-            6. Leader (4)<br />
-            7. Actress Hardy (4)<br />
-            8. Small Coin (4)<br />
-            8. Frigid (4)<br />
-            9. Ancient (3)<br />
-            10. Pub brew (3)<br />
-            10. One or eleven (3)<br />
-            11. Musical Ender (4)<br />
-            12. Piggy that went to the market (3)<br />
-            13. Tree person (3)<br />
-          </td>
-          <td>
-            14. Per (4)<br />
-            15. Shock therapy inits (3)
-          </td>
-          </tr>
-      </table>
-    </div>
+<br />
+<br />
 
+<p>
+The second grid can be solved in the same way, this time using a different set of 9 letters making up the word DECATHLON:
+</p>
 
-    <a href="https://docs.google.com/spreadsheets/d/1bK1rL6LwBshGLBxW8XEE9DfUP3EJqVRM5xWA_0HSXFo/edit#gid=0" target="_blank">Copyable google sheets version of puzzle</a>
+<table class="cw" style="text-align:center">
+<tr>
+<td class="sol_clue" ><div class="sol"><span class="sol">D</span><span class="clue">1</span></div></td>
+<td ><div class="sol"><span class="sol">N</span></div></td>
+<td class="sol_clue" style="border-right:5px solid black;"><div class="sol"><span class="sol">H</span><span class="clue">2</span></div></td>
+<td ><div class="sol"><span class="sol">O</span></div></td>
+<td ><div class="sol"><span class="sol">C</span></div></td>
+<td class="sol_clue" style="border-right:5px solid black;"><div class="sol"><span class="sol">T</span><span class="clue">3</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">E</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">L</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">E</span></div></td>
+<td ><div class="sol"><span class="sol">A</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td class="highlight" ><div class="sol"><span class="sol">L</span></div></td>
+<td ><div class="sol"><span class="sol">D</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">N</span></div></td>
+<td ><div class="sol"><span class="sol">T</span></div></td>
+<td ><div class="sol"><span class="sol">H</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">C</span><span class="clue">4</span></div></td>
+</tr>
+<tr>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">C</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"><span class="sol">T</span></div></td>
+<td style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">L</span></div></td>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">H</span><span class="clue">5</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">E</span></div></td>
+<td style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">D</span><span class="clue">6</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"><span class="sol">N</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">C</span><span class="clue">7</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">E</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">H</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">O</span><span class="clue">8</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">L</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">D</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">D</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">A</span><span class="clue">9</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">L</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">E</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td ><div class="sol"><span class="sol">C</span></div></td>
+<td ><div class="sol"><span class="sol">H</span></div></td>
+</tr>
+<tr>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">H</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">L</span></div></td>
+<td style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"><span class="sol">N</span></div></td>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">C</span><span class="clue">10</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td style="border-right:5px solid black;border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">D</span></div></td>
+<td style="border-bottom:5px solid black"><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">T</span><span class="clue">11</span></div></td>
+<td class="sol_clue" style="border-bottom:5px solid black"><div class="sol"><span class="sol">E</span><span class="clue">12</span></div></td>
+</tr>
+<tr>
+<td class="sol_clue" ><div class="sol"><span class="sol">L</span><span class="clue">13</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">D</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">E</span><span class="clue">14</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">A</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">C</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">H</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">O</span></div></td>
+<td ><div class="sol"><span class="sol">H</span></div></td>
+<td class="highlight" style="border-right:5px solid black;"><div class="sol"><span class="sol">A</span></div></td>
+<td ><div class="sol"><span class="sol">D</span></div></td>
+<td class="highlight" ><div class="sol"><span class="sol">N</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">L</span></div></td>
+<td ><div class="sol"><span class="sol">C</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">E</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+</tr>
+<tr>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">N</span></div></td>
+<td class="sol_clue" ><div class="sol"><span class="sol">E</span><span class="clue">15</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"style="background-color: #57ebe8"><span class="sol">C</span></div></td>
+<td ><div class="sol"style="background-color: #57ebe8"><span class="sol">T</span></div></td>
+<td ><div class="sol"><span class="sol">H</span></div></td>
+<td style="border-right:5px solid black;"><div class="sol"><span class="sol">O</span></div></td>
+<td ><div class="sol"><span class="sol">L</span></div></td>
+<td class="highlight" ><div class="sol"><span class="sol">D</span></div></td>
+<td ><div class="sol"><span class="sol">A</span></div></td>
+</tr>
+
+</table>
+
+<br />
+<br />
+<p>
+Reading off the yellow letters in order gives the phrase STAN LAND, a clue phrase which hints to the final answer ASIA.
+</p>
+
+<br />
+<br />
     <!-- Puzzle content ends here -->
-    </div>
-  </main>
+  </div>
+</main>
 </div>
 </body>
 </html>
