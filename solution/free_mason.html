@@ -21,67 +21,93 @@
 
 <body>
   
-<nav class="navbar" >
-  <ul class="navbar-list">
-        
-         <li class="navbar-list-item">
-          
-          <a href="../index.html">Back to Main</a>
-          <a href="../puzzle/free_mason.html">Back to Puzzle</a>
-          <a href="../faq.html">FAQ</a>
-        </li>
-  
+  <nav class="navbar" >
+    <ul class="navbar-list">
+      
+     <li class="navbar-list-item">
+      
+      <a href="../index.html">Back to Main</a>
+      <a href="../puzzle/free_mason.html">Back to Puzzle</a>
+      <a href="../faq.html">FAQ</a>
+    </li>
+    
   </ul>
 </nav>
 <div id="notifications"></div>
 
-  
+
 <div class="content">
   <h1 class="puzzle-title-header">FREE MASON!!</h1>
   <main>
     <div class="puzzle-header">
       <div style="width: 100%">
-                   
-            <div class="solved-panel" id="solved" hidden>
-        <h4>Solved!</h4>
-        <p>The answer was <b id="solve-answer" style="color:green;"></b>.</p>
-    </div>
-    <div class="unsolved-panel" id="unsolved" hidden>
-        <h4>Incorrect!</h4>
-    </div>
-
-        
-        <div class="row" id="guess">
-            <div class="column">
-                <label for="id_answer">Enter your guess:</label>
-            </div>
-            <div class="column">
-                <input type="text" name="answer" maxlength="500" required id="id_answer">
-                
-            </div>
-            <div class="column">
-                <button class="btn" type="submit" onclick="check(document.getElementById('id_answer').value, 'free-mason')" id="submit-btn">Submit</button>
-            </div>
+       
+        <div class="puzzle-actions">
+          <p><center>
+            Answer: <span class="answer spoiler">THE GROOM</span>
+            
+            <br />
+            by Michael Calzadilla & Kaley Brauer
+          </center></p>
         </div>
-
         
       </div>
     </div>
     <div class="puzzle">
-        <!-- Puzzle content begins here -->
+      <!-- Puzzle content begins here -->
       
-        <i>
-            He fell into the pig pen. You need to help him, it's his big day!!
-        </i>
+      <p>
+        The title, along with the flavor text, hint towards using the pig pen cypher (also known as the freemason cipher) to decode the symbols, with animals standing in for dots.
+      </p>
 
-        <br />
-        <br />
+      <p>
+        If we try to decode them going clockwise starting from the top left, we get the following string:
+      </p>
 
-        <div style="display: flex; justify-content: center; clear: both;">
-            <img alt="" src="../images/mason.jpg" title="hi friend" style="width: 811px; height: 549px; filter: drop-shadow(5px 8px 2px #999999);">
-        </div>
+      <center>
+        <p>
+          WHIAGTIST NDEAQPGEP GEEIUBJAV EXEHHHCHI
+        </p>
+      </center>
 
-        <!-- Puzzle content ends here -->
+      <p>
+        Which doesn't quite look right. The first thing to notice is that the animal heads rotate as we go along the edge, indicating that we should re-orient the image when we turn to a new side. Interpreting the symbols in this way (which leaves the top row unchanged) gives:
+      </p>
+
+      <center>
+        <p>
+          WHIAGTIST NHEPORINR CEEATHRIS EWEDDDING
+        </p>
+      </center>
+
+      <p>
+        This still doesn't look quite right, although we have a lot less Q's and X's which seems promising. If we read the letters corresponding only to the red fish, they spell out:
+      </p>
+
+      <center>
+        <p>
+          IGNORE RED
+        </p>
+      </center>
+
+      <p>
+        Telling us that we should ignore the red herrings that have been leading us astray! The remaining letters spell out:
+      </p>
+
+      <center>
+        <p>
+          WHAT IS THE PRINCE AT HIS WEDDING
+        </p> 
+      </center>
+
+      <p>
+        The enumeration tells us the final answer is a 3 and a 5 letter word, and the phrase which fits the clue is THE GROOM, our final answer.
+      </p>
+
+      <br />
+      <br />
+
+      <!-- Puzzle content ends here -->
     </div>
   </main>
 </div>
